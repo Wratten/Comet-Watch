@@ -9,10 +9,156 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/tailwind.css"
     />
-    <script src="/assets/script.js"></script>
+    <link rel="stylesheet" href="assets/style.css">
     <title>Comet Watch</title>
   </head>
   <body>
+     <!-- NAV BAR -->
+    <nav
+      class="relative flex flex-wrap items-center justify-between px-2 py-3 bg-indigo-500 mb-3"
+    >
+      <div
+        class="container px-4 mx-auto flex flex-wrap items-center justify-between"
+      >
+        <div
+          class="w-full relative flex justify-between lg:w-auto px-4 lg:static lg:block lg:justify-start"
+        >
+          <a
+            class="text-xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+            href="#pablo"
+          >
+            Comet Watch
+          </a>
+          <button
+            class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+            type="button"
+          >
+            <span class="block relative w-6 h-px rounded-sm bg-white"></span>
+            <span
+              class="block relative w-6 h-px rounded-sm bg-white mt-1"
+            ></span>
+            <span
+              class="block relative w-6 h-px rounded-sm bg-white mt-1"
+            ></span>
+          </button>
+        </div>
+        <div class="lg:flex flex-grow items-center" id="example-navbar-warning">
+        </div>
+      </div>
+    </nav>
+    <!-- START DATE INPUT -->
+    <div class="mb-3 pt-0 max-w-sm inline-block">
+      <input
+        type="text"
+        placeholder="Start Date"
+        class="px-3 py-4 placeholder-blueGray-300 text-blueGray-500 relative bg-white bg-white rounded text-base border-0 shadow outline-none focus:outline-none focus:ring w-full"
+      />
+    </div>
+    <!-- END DATE INPUT -->
+    <div class="mb-3 pt-0 max-w-sm inline-block">
+      <input
+        type="text"
+        placeholder="End Date"
+        class="px-3 py-4 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-base border-0 shadow outline-none focus:outline-none focus:ring w-full"
+      />
+    </div>
+    <!-- SEARCH BUTTON -->
+    <button
+      class="bg-indigo-500 text-white active:bg-indigo-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+      type="button"
+    >
+      Search
+    </button>
+    <!-- TABLE WHERE ASTEROID SEARCH WILL FILL-->
+    <div class="flex flex-wrap mt-4">
+      <div class="w-full xl:w-6/12 mb-12 xl:mb-0 px-4">
+        <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
+          <div class="rounded-t mb-0 px-4 py-3 border-0">
+            <div class="flex flex-wrap items-center">
+              <div class="relative w-full px-4 max-w-full flex-grow flex-1">
+                <h3 class="font-semibold text-base text-blueGray-700">
+                  Near Earth Objects
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="block w-full overflow-x-auto">
+            <!-- Projects table -->
+            <table class="items-center w-full bg-transparent border-collapse">
+              <thead>
+                <tr>
+                  <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                    Asteroid name
+                  </th>
+                  <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                    Date
+                  </th>
+                  <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                    Id
+                  </th>
+                  <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                    Diameter
+                  </th>
+                  <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                    Potentially Hazardous
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+                    ASTEROID_NAME
+                  </th>
+                  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                    4th of Jan 2022
+                  </td>
+                  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                    340
+                  </td>
+                  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                    <i class="fas fa-arrow-up text-emerald-500 mr-4"></i>
+                    4km
+                  </td>
+                  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                    <i class="fas fa-arrow-up text-emerald-500 mr-4"></i>
+                    False
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
+         <div
+           class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-indigo-600"
+         >
+           <img
+             alt="..."
+             src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1051&amp;q=80"
+             class="w-full align-middle rounded-t-lg"
+           />
+           <blockquote class="relative p-8 mb-4">
+             <svg
+               preserveAspectRatio="none"
+               xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 583 95"
+               class="absolute left-0 w-full block"
+               style="height: 95px; top: -94px;"
+             >
+               <polygon
+                 points="-30,95 583,95 583,65"
+                 class="text-indigo-500 fill-current"
+               ></polygon>
+             </svg>
+             <h4 class="text-xl font-bold text-white">
+               What is a Near-Earth Object?
+             </h4>
+             <p class="text-md font-light mt-2 text-white">
+               A near-Earth object (NEO) is any small Solar System body whose orbit brings it into proximity with Earth. By convention, a Solar System body is a NEO if its closest approach to the Sun (perihelion) is less than 1.3 astronomical units. If a NEO's orbit crosses the Earth's, and the object is larger than 140 meters (460 ft) across, it is considered a potentially hazardous object (PHO). Most known PHOs and NEOs are asteroids, but a small fraction are comets.
+             </p>
+           </blockquote>
+         </div>
     <script src="/assets/script.js"></script>
   </body>
 </html>
