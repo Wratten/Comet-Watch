@@ -13,41 +13,25 @@
 
 <body>
   <!-- NAV BAR -->
-  <nav class="relative flex flex-wrap items-center justify-between px-2 py-3 bg-indigo-500 mb-3">
-    <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
-      <div class="w-full relative flex justify-between lg:w-auto px-4 lg:static lg:block lg:justify-start">
-        <a class="text-xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
-          href="#pablo">
-          Comet Watch
-        </a>
-        <button
-          class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
-          type="button">
-          <span class="block relative w-6 h-px rounded-sm bg-white"></span>
-          <span class="block relative w-6 h-px rounded-sm bg-white mt-1"></span>
-          <span class="block relative w-6 h-px rounded-sm bg-white mt-1"></span>
-        </button>
-      </div>
-      <div class="lg:flex flex-grow items-center" id="example-navbar-warning">
-      </div>
+  <nav class="relative px-2 py-3 bg-indigo-500 mb-3">
+    <div class="ml-5">
+      <h1 class="text-xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white">
+        Comet Watch
+      </h1>
     </div>
   </nav>
-  <!-- DATE INPUT -->
   <div class="mb-3 pt-0 max-w-sm inline-block">
-     <form id="form-search">
-    <input type="text" placeholder="Start Date YYYY-MM-DD"
-    id="start-date-input"  
-    class="px-3 py-4 placeholder-blueGray-300 text-blueGray-500 relative bg-white bg-white rounded text-base border-0 shadow outline-none focus:outline-none focus:ring w-full" />
+    <form id="form-search">
+      <input type="text" placeholder="Start Date YYYY-MM-DD" id="start-date-input"
+        class="px-3 py-4 placeholder-blueGray-300 text-blueGray-500 relative bg-white bg-white rounded text-base border-0 shadow outline-none focus:outline-none focus:ring w-full" />
   </div>
-   
   <!-- SEARCH BUTTON -->
-  <button
-  id="search-button"
+  <button id="search-button"
     class="bg-indigo-500 text-white active:bg-indigo-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
     type="submit">
     Search
   </button>
-</form>
+  </form>
   <!-- TABLE WHERE ASTEROID SEARCH WILL FILL-->
   <div class="flex flex-wrap mt-4">
     <div class="w-full xl:w-6/12 mb-12 xl:mb-0 px-4">
@@ -118,32 +102,34 @@
       <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-indigo-600">
 
         <div class="slideshow-container">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" id="prev-btn" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" id="prev-btn" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" id="next-btn" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" id="next-btn" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
           </svg>
           <div class="slideshow-carousel">
             <img src="./assets/images/img8.jpg" id="last-img">
-            <img src="./assets/images/img1.jpg" >
-            <img src="./assets/images/img2.jpg" >
-            <img src="./assets/images/img3.jpg" >
-            <img src="./assets/images/img4.jpg" >
-            <img src="./assets/images/img5.jpg" >
-            <img src="./assets/images/img6.jpg" >
-            <img src="./assets/images/img7.jpg" >
-            <img src="./assets/images/img8.jpg" >
+            <img src="./assets/images/img1.jpg">
+            <img src="./assets/images/img2.jpg">
+            <img src="./assets/images/img3.jpg">
+            <img src="./assets/images/img4.jpg">
+            <img src="./assets/images/img5.jpg">
+            <img src="./assets/images/img6.jpg">
+            <img src="./assets/images/img7.jpg">
+            <img src="./assets/images/img8.jpg">
             <img src="./assets/images/img1.jpg" id="first-img">
-           </div>
+          </div>
         </div>
-        
+
         <blockquote class="relative p-8 mb-4">
           <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95"
             class="absolute left-0 w-full block" style="height: 95px; top: -94px;">
             <polygon points="-30,95 583,95 583,65" class="text-indigo-500 fill-current"></polygon>
           </svg>
-         
+
           <h4 class="text-xl font-bold text-white">
             What is a Near-Earth Object?
           </h4>
@@ -158,12 +144,9 @@
       </div>
     </div>
     <!-- link jQuery -->
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.js"
-      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-      crossorigin="anonymous"
-    ></script>
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
     <script src="./assets/script.js"></script>
 </body>
 
