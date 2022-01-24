@@ -1,0 +1,25 @@
+.slideshow-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.slideshow-carousel {
+    display: flex;
+  }
+  
+#next-btn {
+    color: white;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    right: 3%;
+}
+
+#prev-btn {
+    color: white;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    left: 3%;
+}
+
