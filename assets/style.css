@@ -1,0 +1,12 @@
+.mySlides {
+    display: none;
+  }
+  
+.prev, .next {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    padding: 110px;
+}
+  
