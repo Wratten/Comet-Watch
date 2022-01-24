@@ -34,20 +34,26 @@
   </nav>
   <!-- START DATE INPUT -->
   <div class="mb-3 pt-0 max-w-sm inline-block">
-    <input type="text" placeholder="Start Date"
-      class="px-3 py-4 placeholder-blueGray-300 text-blueGray-500 relative bg-white bg-white rounded text-base border-0 shadow outline-none focus:outline-none focus:ring w-full" />
+     <form id="form-search">
+    <input type="text" placeholder="Start Date YYYY-MM-DD"
+    id="start-date-input"  
+    class="px-3 py-4 placeholder-blueGray-300 text-blueGray-500 relative bg-white bg-white rounded text-base border-0 shadow outline-none focus:outline-none focus:ring w-full" />
   </div>
   <!-- END DATE INPUT -->
   <div class="mb-3 pt-0 max-w-sm inline-block">
-    <input type="text" placeholder="End Date"
+    <input type="text" placeholder="End Date YYYY-MM-DD"
+    id="end-date-input"
       class="px-3 py-4 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-base border-0 shadow outline-none focus:outline-none focus:ring w-full" />
   </div>
+   
   <!-- SEARCH BUTTON -->
   <button
+  id="search-button"
     class="bg-indigo-500 text-white active:bg-indigo-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-    type="button">
+    type="submit">
     Search
   </button>
+</form>
   <!-- TABLE WHERE ASTEROID SEARCH WILL FILL-->
   <div class="flex flex-wrap mt-4">
     <div class="w-full xl:w-6/12 mb-12 xl:mb-0 px-4">
@@ -157,6 +163,13 @@
         </blockquote>
       </div>
     </div>
+    <!-- link jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    
     <script src="./assets/script.js"></script>
 </body>
 
