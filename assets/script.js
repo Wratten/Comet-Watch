@@ -10,6 +10,8 @@ const startDateInput = document.getElementById("start-date-input");
 // End Date Input Field
 const endDateInput = document.getElementById("end-date-input");
 
+const searchForm = document.getElementById("form-search");
+
 // Search button
 const searchBtn = document.getElementById("search-button");
 
@@ -19,9 +21,24 @@ const searchBtn = document.getElementById("search-button");
 // MUST BE FORMATTED LIKE YYYY-MM-DD eg. 2022-01-23
 // https://api.nasa.gov/neo/rest/v1/feed?start_date=${START_DATE}&end_date=${END_DATE}&api_key=${API_KEY}
 // handle search input
-function getNeoData(neo) {
-  const url = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${START_DATE}&end_date=${END_DATE}&api_key=${API_KEY}`;
+
+function getNeoData(startDate, endDate) {
+  const url = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=${nasaApiKey}`;
+
+  return fetch(url).then(function (response) {
+    return response.json();
+  });
 }
+
+searchForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  const endDate = endDateInput.value;
+  const startDate = startDateInput.value;
+
+  getNeoData(startDate, endDate).then(function (near_earth_objects) {
+    console.log(near_earth_objects);
+  });
+});
 
 // create and append elements for list an fill them with data from api
 
