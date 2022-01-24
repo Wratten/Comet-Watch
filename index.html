@@ -113,48 +113,37 @@
         </div>
       </div>
     </div>
+    <!-- IMAGE SLIDESHOW -->
     <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
       <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-indigo-600">
 
         <div class="slideshow-container">
-          <div class="mySlides fade">
-            <img src="images/img1.jpg" style="width:100%">
-          </div>
-
-          <div class="mySlides fade">
-            <img src="images/img2.jpg" style="width:100%">
-          </div>
-
-          <div class="mySlides fade">
-            <img src="images/img3.jpg" style="width:100%">
-          </div>
-
-          <div class="mySlides fade">
-            <img src="images/img4.jpg" style="width:100%">
-          </div>
-
-          <div class="mySlides fade">
-            <img src="images/img5.jpg" style="width:100%">
-          </div>
-
-          <div class="mySlides fade">
-            <img src="images/img6.jpg" style="width:100%">
-          </div>
-
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" id="prev-btn" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" id="next-btn" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+          <div class="slideshow-carousel">
+            <img src="images/img8.jpg" id="last-img">
+            <img src="images/img1.jpg" >
+            <img src="images/img2.jpg" >
+            <img src="images/img3.jpg" >
+            <img src="images/img4.jpg" >
+            <img src="images/img5.jpg" >
+            <img src="images/img6.jpg" >
+            <img src="images/img7.jpg" >
+            <img src="images/img8.jpg" >
+            <img src="images/img1.jpg" id="first-img">
+           </div>
         </div>
-
+        
         <blockquote class="relative p-8 mb-4">
           <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95"
             class="absolute left-0 w-full block" style="height: 95px; top: -94px;">
-            <!-- <polygon
-                 points="-30,95 583,95 583,65"
-                 class="text-indigo-500 fill-current"
-               ></polygon> -->
-
+            <polygon points="-30,95 583,95 583,65" class="text-indigo-500 fill-current"></polygon>
           </svg>
+         
           <h4 class="text-xl font-bold text-white">
             What is a Near-Earth Object?
           </h4>
@@ -167,7 +156,8 @@
           </p>
         </blockquote>
       </div>
-      <script src="/assets/script.js"></script>
+    </div>
+    <script src="/assets/script.js"></script>
 </body>
 
 </html>
