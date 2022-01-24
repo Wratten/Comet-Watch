@@ -4,12 +4,10 @@
 // Api Key
 const nasaApiKey = "31bgnwZEP4zsKJHZeVH7vEEez47UVCe8k62awaSG";
 
-// Start Date Input Field
-const startDateInput = document.getElementById("start-date-input");
+// Date Input Field
+const DateInput = document.getElementById("start-date-input");
 
-// End Date Input Field
-const endDateInput = document.getElementById("end-date-input");
-
+// Search form
 const searchForm = document.getElementById("form-search");
 
 // Search button
@@ -22,8 +20,8 @@ const searchBtn = document.getElementById("search-button");
 // https://api.nasa.gov/neo/rest/v1/feed?start_date=${START_DATE}&end_date=${END_DATE}&api_key=${API_KEY}
 // handle search input
 
-function getNeoData(startDate, endDate) {
-  const url = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=${nasaApiKey}`;
+function getNeoData(date) {
+  const url = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${date}&end_date=${date}&api_key=${nasaApiKey}`;
 
   return fetch(url).then(function (response) {
     return response.json();
@@ -32,11 +30,17 @@ function getNeoData(startDate, endDate) {
 
 searchForm.addEventListener("submit", function (event) {
   event.preventDefault();
-  const endDate = endDateInput.value;
-  const startDate = startDateInput.value;
+  const date = DateInput.value;
 
-  getNeoData(startDate, endDate).then(function (near_earth_objects) {
-    console.log(near_earth_objects);
+  getNeoData(date).then(function (data) {
+    console.log(data);
+
+    // data.near_earth_objects.DATEVARIABLE.name
+    // data.near_earth_objects.DATEVARIABLE.close_approach_date_full
+    // data.near_earth_objects.DATEVARIABLE.neo_reference_id
+    // data.near_earth_objects.DATEVARIABLE.estimated_diameter.kilometers.estimated_diameter_min
+    // data.near_earth_objects.DATEVARIABLE.estimated_diameter.kilometers.estimated_diameter_max
+    // data.near_earth_objects.DATEVARIABLE.is_potentially_hazardous_asteroid
   });
 });
 
