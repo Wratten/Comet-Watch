@@ -1,12 +1,25 @@
-.mySlides {
-    display: none;
+.slideshow-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.slideshow-carousel {
+    display: flex;
   }
   
-.prev, .next {
+#next-btn {
     color: white;
-    font-weight: bold;
-    font-size: 20px;
-    transition: 0.6s ease;
-    padding: 110px;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    right: 3%;
 }
-  
+
+#prev-btn {
+    color: white;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    left: 3%;
+}
+
