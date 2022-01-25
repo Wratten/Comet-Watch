@@ -85,64 +85,6 @@ function createAsteroidRow(name, date, id, diameter,  isHazard){
 
 }
 
-function createAsteroidRow(name, date, id, diameter,  isHazard){
-  const asteroidRow = document.createElement('tr');
-  const nameEl = document.createElement('th');
-  const nameClass = "border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left";
-  nameEl.setAttribute('class', nameClass);
-  nameEl.textContent = name;
-  asteroidRow.appendChild(nameEl);
-  
-  const dateEl = document.createElement('td');
-  const dateClass = "border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4";
-  dateEl.setAttribute('class', dateClass);
-  dateEl.textContent = date;
-  asteroidRow.appendChild(dateEl);
-
-  const idElement = document.createElement('td');
-  const idClass = "border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4";
-  idElement.setAttribute('class', idClass);
-  idElement.textContent = id;
-  asteroidRow.appendChild(idElement);
-
-  const diameter = document.createElement('td');
-  const diameterClass = "border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4";
-  diameter.setAttribute('class', diameterClass);
-  diameter.textContent = near_earth_objects.date.value // TODO: identify the correct path
-  asteroidRow.appendChild(diameter);
-
-  const isHazard = document.createElement('td');
-  const isHazardClass = "border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4";
-  isHazard.setAttribute('class',isHazardClass);
-  isHazard.textContent = data.estimated_diameter.is_potentially_hazardous_asteroide
-  asteroidRow.appendChild(isHazard.value);
-
-  
-  return asteroidRow;
-
-
-  // <tr>
-  //               <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-  //                 ASTEROID_NAME
-  //               </th>
-  //                    <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-  //                      4th of Jan 2022
-  //                    </td>
-  //              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-  //                 340
-  //               </td>
-  //                      <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-  //                        <i class="fas fa-arrow-up text-emerald-500 mr-4"></i>
-  //                        4km
-  //                      </td>
-  //               <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-  //                 <i class="fas fa-arrow-up text-emerald-500 mr-4"></i>
-  //                 False
-  //               </td>
-  //             </tr>
-
-}
-
 searchForm.addEventListener("submit", function (event) {
   event.preventDefault();
   const date = DateInput.value;
