@@ -27,7 +27,7 @@ function getNeoData(date) {
     return response.json();
   });
 }
-function createAsteroidRow(name, date, id, diameter,  isHazard){
+function createAsteroidRow(name, date, id, diameter, isHazard){
   const asteroidRow = document.createElement('tr');
   const nameEl = document.createElement('th');
   const nameClass = "border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left";
@@ -50,16 +50,15 @@ function createAsteroidRow(name, date, id, diameter,  isHazard){
   const diameterEl = document.createElement('td');
   const diameterClass = "border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4";
   diameterEl.setAttribute('class', diameterClass);
-  diameterEl.textContent = data.near_earth_objects[date] // TODO: identify the correct path
+  diameterEl.textContent = diameter;
   asteroidRow.appendChild(diameterEl);
 
-  const isHazard = document.createElement('td');
+  const isHazardEl = document.createElement('td');
   const isHazardClass = "border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4";
-  isHazard.setAttribute('class',isHazardClass);
-  isHazard.textContent = data.estimated_diameter.is_potentially_hazardous_asteroide
-  asteroidRow.appendChild(isHazard.value);
+  isHazardEl.setAttribute('class',isHazardClass);
+  isHazardEl.textContent = isHazard;
+  asteroidRow.appendChild(isHazardEl);
 
-  
   return asteroidRow;
 
 
@@ -103,7 +102,7 @@ searchForm.addEventListener("submit", function (event) {
       
       
       // create and append elements for list an fill them with data from api
-      const row = createAsteroidRow(asteroid.name, asteroid.date, asteroid.id, asteroid.diameter, asteroid.isHazard);
+      const row = createAsteroidRow(asteroid.name, date, asteroid.id, asteroid.estimated_diameter.kilometers.estimated_diameter_max, asteroid.is_potentially_hazardous_asteroid);
 
       tableRow.appendChild(row);
     
@@ -121,22 +120,22 @@ searchForm.addEventListener("submit", function (event) {
 
 
 // create and append elements for list an fill them with data from api
-const tableRow = document.getElementById('asteroid-table-row');
-const asteroids = data.near_earth_objects[date];
+// const tableRow = document.getElementById('asteroid-table-row');
+// const asteroids = data.near_earth_objects[date];
+// console.log(asteroids)
 
-console.log(asteroids);
 
-// For each asteroid in data we want a row
-for (let index = 0; index <asteroids.length; index++) {
-  const asteroid = asteroids[index];
+// // For each asteroid in data we want a row
+// for (let index = 0; index <asteroids.length; index++) {
+//   const asteroid = asteroids[index];
   
   
-  // create and append elements for list an fill them with data from api
-  const row = createAsteroidRow(asteroid.name, asteroid.date, asteroid.id, asteroid.diameter, asteroid.isHazard);
+//   // create and append elements for list an fill them with data from api
+//   const row = createAsteroidRow(asteroid.name, asteroid.date, asteroid.id, asteroid.diameter, asteroid.isHazard);
 
-  tableRow.appendChild(row);
+//   tableRow.appendChild(row);
 
-}
+// }
 
 
 // display new search
