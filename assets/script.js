@@ -5,7 +5,6 @@ $(document).ready(function () {
   // Define HTML elements
   const DateInput = document.getElementById("start-date-input");
   const searchForm = document.getElementById("form-search");
-  const searchBtn = document.getElementById("search-button");
   const apodImgEl = document.getElementById("last-img");
 
   // picture carousel elements
@@ -16,7 +15,7 @@ $(document).ready(function () {
   const imageSize = carouselImages[0].clientWidth;
   var imageCounter = 0;
 
-  // Get data from API
+  // Get data from near earth objects api
   function getNeoData(date) {
     // Build the URL using user input date & api key
     const url = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${date}&end_date=${date}&api_key=${nasaApiKey}`;
@@ -26,7 +25,7 @@ $(document).ready(function () {
       return response.json();
     });
   }
-
+  // Get data from astronomy picture of the day api
   function getAPOD(date) {
     const url = `https://api.nasa.gov/planetary/apod?api_key=${nasaApiKey}&date=${date}`;
 
@@ -36,10 +35,28 @@ $(document).ready(function () {
     });
   }
 
+  // Clear created elements function
+  function clearTable() {
+    // Define asteroid row
+    const asteroidRow = document.getElementById("asteroidRow");
+    // if asteroid row exists
+    if (asteroidRow) {
+    }
+    // Define the container that holds the asteroid rows
+    const tableContents = document.getElementById("asteroid-table-row");
+    // While theres still content in the container
+    while (tableContents.firstChild) {
+      // Get rid of the last content
+      tableContents.removeChild(tableContents.lastChild);
+    }
+  }
+
   // When the user submits a search
   searchForm.addEventListener("submit", function (event) {
     // Prevent the page from reloading
     event.preventDefault();
+    // Clears previous data
+    clearTable();
     // Create a variable that is the user input value
     const date = DateInput.value;
     // Set the submitted date in local storage
@@ -76,6 +93,7 @@ $(document).ready(function () {
   // Function to build the table with data
   function createAsteroidRow(name, date, id, diameter, isHazard) {
     const asteroidRow = document.createElement("tr");
+    asteroidRow.setAttribute("id", "asteroidRow");
     const nameEl = document.createElement("th");
     const nameClass =
       "border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left";
@@ -122,7 +140,6 @@ $(document).ready(function () {
       getNeoData(savedDate).then(function (data) {
         const tableRow = document.getElementById("asteroid-table-row");
         const asteroids = data.near_earth_objects[savedDate];
-        console.log(asteroids);
 
         // For each asteroid in data we want a row
         for (let index = 0; index < asteroids.length; index++) {
@@ -140,10 +157,13 @@ $(document).ready(function () {
           tableRow.appendChild(row);
         }
       });
+      getAPOD(savedDate).then(function (data) {
+        apodImgEl.src = data.url;
+      });
     }
     loadLastSearch();
   }
-  console.log(localStorage);
+
   // PICTURE SLIDESHOW JS//
   carouselSlideshow.style.transform =
     "translateX(" + -imageSize * imageCounter + "px)";
