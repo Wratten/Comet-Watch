@@ -5,7 +5,7 @@ $(document).ready(function () {
   // Define HTML elements
   const DateInput = document.getElementById("start-date-input");
   const searchForm = document.getElementById("form-search");
-  const apodImgEl = document.getElementById("last-img");
+  const apodImgEl = document.getElementById("daily-img");
   const clearSaveButton = document.getElementById("clear-save-button");
 
   // picture carousel elements
