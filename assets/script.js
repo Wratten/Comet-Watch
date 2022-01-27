@@ -6,6 +6,7 @@ $(document).ready(function () {
   const DateInput = document.getElementById("start-date-input");
   const searchForm = document.getElementById("form-search");
   const apodImgEl = document.getElementById("last-img");
+  const clearSaveButton = document.getElementById("clear-save-button");
 
   // picture carousel elements
   const carouselSlideshow = document.querySelector(".slideshow-carousel");
@@ -50,6 +51,11 @@ $(document).ready(function () {
       tableContents.removeChild(tableContents.lastChild);
     }
   }
+
+  clearSaveButton.addEventListener("click", function () {
+    localStorage.clear();
+    location.reload();
+  });
 
   // When the user submits a search
   searchForm.addEventListener("submit", function (event) {
