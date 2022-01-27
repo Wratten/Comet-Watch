@@ -1,5 +1,5 @@
 body {
-  height: 100vh;
+  height: 150vh;
   justify-content: center;
   align-items: center;
   background: radial-gradient(ellipse at bottom, #140d31, #111);
@@ -159,4 +159,19 @@ body {
   top: 50%;
   z-index: 10;
   left: 3%;
+}
+
+#search-button:hover {
+  box-shadow: 0 0 5px #4f46e5, 0 0 25px #4f46e5, 0 0 50px #4f46e5,
+    0 0 75px #4f46e5;
+}
+
+#clear-save-button:hover {
+  box-shadow: 0 0 5px #4f46e5, 0 0 25px #4f46e5, 0 0 50px #4f46e5,
+    0 0 75px #4f46e5;
+}
+
+#start-date-input:focus {
+  box-shadow: 0 0 5px #4f46e5, 0 0 25px #4f46e5, 0 0 50px #4f46e5,
+    0 0 75px #4f46e5;
 }
