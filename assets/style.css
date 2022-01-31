@@ -1,9 +1,10 @@
 body {
-  height: 150vh;
+  height: 100vh;
   justify-content: center;
   align-items: center;
   background: radial-gradient(ellipse at bottom, #140d31, #111);
   background: #140d31;
+  overflow-x: hidden;
 }
 
 .night {
