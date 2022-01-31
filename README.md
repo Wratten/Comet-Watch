@@ -6,7 +6,7 @@
 ## Installation
 To get our project running, we used 2 APIs from NASA. First API is called **NeoWs**, which stands for **"Near Earth Object Web Service".** This API provided all the Asteroid's data in our web page based on a date the user selects.
 
-To ensure **Comet Watch** was appealing to our users we implemented the use of a second API called **APOD - Astronomy Picure of the Day API.** This generates a random image based on the date the user has chosen which is incorporated into a fixed image carousel. 
+To ensure **Comet Watch** was appealing to our users we implemented the use of a second API called **APOD - Astronomy Picture of the Day API.** This generates a random image based on the date the user has chosen which is incorporated into a fixed image carousel. 
  
 ## User Story
 As a user with a passionate interest in Comet's and anything galaxy related. I want to be able to select a date of choice then view a list of near Earth objects with interesting facts. When the date is chosen, a fascinating image will be displayed for each day!
