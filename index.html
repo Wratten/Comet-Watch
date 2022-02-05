@@ -15,30 +15,35 @@
   <!-- NAV BAR -->
   <nav class="relative px-2 py-3 bg-indigo-600 mb-3">
     <div class="ml-7">
-      <h1 class="text-3xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white title">
+      <h1
+        class="text-3xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white title">
         Comet Watch
       </h1>
     </div>
   </nav>
 
   <!-- SEARCH FORM & BUTTON -->
-  <div class="ml-5 mr-5 mb-5 pt-5 inline-block search-form">
-    <form id="form-search">
-      <input type="text" placeholder=" Date YYYY-MM-DD" id="start-date-input"
-        class="px-1 py-4 placeholder-blueGray-300 text-blueGray-500 relative bg-white bg-white rounded text-base border-0 shadow outline-none focus:outline-none focus:ring w-5/6" />
-  </div>
+  <div class="flex flex-wrap">
+    <div class="ml-9 mb-5 pt-5 inline-block search-form">
+      <form id="form-search">
+        <input type="text" placeholder="Date YYYY-MM-DD" id="start-date-input"
+          class="px-5 py-4 placeholder-blueGray-300 text-blueGray-500 relative bg-white bg-white rounded text-base border-0 shadow outline-none focus:outline-none focus:ring w-5/6" />
+    </div>
 
-  <button id="search-button"
-    class="bg-indigo-500 text-white active:bg-indigo-600 font-bold uppercase text-sm ml-0 px-3 py-4 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 button"
-    type="submit">
-    Search
-  </button>
-  </form>
-  <button id="clear-save-button"
-    class="bg-indigo-500 text-white active:bg-indigo-600 font-bold uppercase text-sm px-4 py-4 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 button"
-    type="submit">
-    Clear
-  </button>
+    <div class="date-buttons">
+      <button id="search-button"
+        class="bg-indigo-500 text-white active:bg-indigo-600 font-bold uppercase text-sm px-5 py-4 mt-5 mr-2 mb-5 rounded shadow hover:shadow-lg outline-none focus:outline-none ease-linear transition-all duration-150 button"
+        type="submit">
+        Search
+      </button>
+      </form>
+      <button id="clear-save-button"
+        class="bg-indigo-500 text-white active:bg-indigo-600 font-bold uppercase text-sm px-6 py-4 mt-5 mb-5 rounded shadow hover:shadow-lg outline-none focus:outline-none ease-linear transition-all duration-150 button"
+        type="submit">
+        Clear
+      </button>
+    </div>
+  </div>
 
   <div class="night">
     <div class="star"></div>
@@ -141,7 +146,7 @@
         </blockquote>
       </div>
     </div>
-    
+
     <!-- jQuery LINK -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
